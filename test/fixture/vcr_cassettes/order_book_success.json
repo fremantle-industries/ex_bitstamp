@@ -1,0 +1,28 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.bitstamp.net/api/v2/order_book/btcusd"
+    },
+    "response": {
+      "body": "{\"timestamp\": \"1513896396\", \"bids\": [[\"15677.95\", \"0.15180556\"], [\"15677.94\", \"1.49272243\"], [\"15677.75\", \"0.27232000\"], [\"15677.74\", \"12.52500000\"], [\"15672.29\", \"0.00319470\"]], \"asks\": [[\"15730.00\", \"0.27969236\"], [\"15734.78\", \"0.26145000\"], [\"15734.80\", \"0.95060000\"], [\"15735.00\", \"1.70000000\"], [\"15739.95\", \"0.00251380\"]]}", 
+      "headers": {
+        "Etag": "W/\"607da-36c89-560e17901ffc3\"",
+        "Last-Modified": "Thu, 21 Dec 2017 22:46:37 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "224393",
+        "Connection": "keep-alive",
+        "Date": "Thu, 21 Dec 2017 22:46:41 GMT",
+        "Set-Cookie": "visid_incap_99025=MEoXqVryRQ6Qf68sF6XXf9E5PFoAAAAAQUIPAAAAAACuBYBCRlRCDfNSj8tdEFjH; expires=Fri, 21 Dec 2018 10:18:23 GMT; path=/; Domain=.bitstamp.net",
+        "X-Iinfo": "14-69891796-0 0CNN RT(1513896401289 105) q(0 -1 -1 1) r(0 -1)",
+        "X-CDN": "Incapsula"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
