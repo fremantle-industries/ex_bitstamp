@@ -1,4 +1,5 @@
 # ExBitstamp
+[![Build Status](https://circleci.com/gh/fremantle-capital/ex_bitstamp.svg?style=svg)](https://circleci.com/gh/fremantle-capital/ex_bitstamp)
 
 Bitstamp API client for Elixir
 
