@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "key=thekey&nonce=1514408208785813000&signature=thesignature",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.bitstamp.net/api/v2/balance/"
+    },
+    "response": {
+      "body": "{\"bch_available\": \"0.00000000\", \"bch_balance\": \"0.00000000\", \"bch_reserved\": \"0.00000000\", \"bchbtc_fee\": \"0.00\", \"bcheur_fee\": \"0.00\", \"bchusd_fee\": \"0.00\", \"btc_available\": \"0.00000000\", \"btc_balance\": \"0.00000000\", \"btc_reserved\": \"0.00000000\", \"btceur_fee\": \"0.20\", \"btcusd_fee\": \"0.20\", \"eth_available\": \"0.00000000\", \"eth_balance\": \"0.00000000\", \"eth_reserved\": \"0.00000000\", \"ethbtc_fee\": \"0.15\", \"etheur_fee\": \"0.15\", \"ethusd_fee\": \"0.15\", \"eur_available\": \"0.00\", \"eur_balance\": \"0.00\", \"eur_reserved\": \"0.00\", \"eurusd_fee\": \"0.20\", \"ltc_available\": \"0.00000000\", \"ltc_balance\": \"0.00000000\", \"ltc_reserved\": \"0.00000000\", \"ltcbtc_fee\": \"0.20\", \"ltceur_fee\": \"0.20\", \"ltcusd_fee\": \"0.20\", \"usd_available\": \"0.00\", \"usd_balance\": \"0.00\", \"usd_reserved\": \"0.00\", \"xrp_available\": \"0.00000000\", \"xrp_balance\": \"0.00000000\", \"xrp_reserved\": \"0.00000000\", \"xrpbtc_fee\": \"0.20\", \"xrpeur_fee\": \"0.20\", \"xrpusd_fee\": \"0.20\"}",
+      "headers": {
+        "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, accept, cache-control",
+        "Access-Control-Allow-Methods": "POST, GET",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "max-age=0",
+        "Content-Language": "en",
+        "Content-Type": "application/json",
+        "Date": "Wed, 27 Dec 2017 20:56:49 GMT",
+        "Expires": "Wed, 27 Dec 2017 20:56:49 GMT",
+        "Last-Modified": "Wed, 27 Dec 2017 20:56:49 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Vary": "Accept-Language",
+        "X-Frame-Options": "SAMEORIGIN",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "visid_incap_99025=Q96mFevWRDeNxns+OMy5bhAJRFoAAAAAQUIPAAAAAAA8ebmiO4YO1LaTAs42WXo2; expires=Thu, 27 Dec 2018 10:18:29 GMT; path=/; Domain=.bitstamp.net",
+        "X-Iinfo": "12-85289288-85288373 PNNN RT(1514408208173 60) q(0 0 0 -1) r(2 2) U6",
+        "X-CDN": "Incapsula"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

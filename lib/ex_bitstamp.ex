@@ -4,4 +4,5 @@ defmodule ExBitstamp do
   """
 
   defdelegate order_book(symbol), to: ExBitstamp.Public
+  defdelegate balance, to: ExBitstamp.Private
 end

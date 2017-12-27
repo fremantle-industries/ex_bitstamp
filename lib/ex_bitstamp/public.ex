@@ -1,5 +1,5 @@
 defmodule ExBitstamp.Public do
-  alias ExBitstamp.Http
+  alias ExBitstamp.Api
   alias ExBitstamp.Symbol
 
   @doc """
@@ -13,6 +13,6 @@ defmodule ExBitstamp.Public do
   """
   def order_book(symbol) do
     "order_book/#{Symbol.downcase(symbol)}"
-    |> Http.get
+    |> Api.get
   end
 end

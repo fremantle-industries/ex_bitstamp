@@ -1,0 +1,37 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.bitstamp.net/api/v2/balance/"
+    },
+    "response": {
+      "body": "{\"status\": \"error\", \"reason\": \"Missing key, signature and nonce parameters.\", \"code\": \"API0000\"}",
+      "headers": {
+        "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, accept, cache-control",
+        "Access-Control-Allow-Methods": "POST, GET",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "max-age=0",
+        "Content-Language": "en",
+        "Content-Type": "application/json",
+        "Date": "Wed, 27 Dec 2017 01:39:14 GMT",
+        "Expires": "Wed, 27 Dec 2017 01:39:14 GMT",
+        "Last-Modified": "Wed, 27 Dec 2017 01:39:14 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Vary": "Accept-Language",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Length": "96",
+        "Connection": "keep-alive",
+        "Set-Cookie": "visid_incap_99025=1bDcia15R8qy0lFHlav92sH5QloAAAAAQUIPAAAAAAAwu4ARtCyz2cvk+G6iNMk6; expires=Wed, 26 Dec 2018 10:18:28 GMT; path=/; Domain=.bitstamp.net",
+        "X-Iinfo": "11-65354568-65353949 PNNN RT(1514338753633 84) q(0 0 0 -1) r(1 1) U6",
+        "X-CDN": "Incapsula"
+      },
+      "status_code": 403,
+      "type": "ok"
+    }
+  }
+]

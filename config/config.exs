@@ -20,6 +20,9 @@ use Mix.Config
 #
 #     config :logger, level: :info
 #
+config :ex_bitstamp,  api_key:      System.get_env("BITSTAMP_API_KEY"),
+                      api_secret:   System.get_env("BITSTAMP_API_SECRET"),
+                      customer_id:  System.get_env("BITSTAMP_CUSTOMER_ID")
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
