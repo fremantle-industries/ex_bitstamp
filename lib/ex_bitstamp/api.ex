@@ -10,12 +10,13 @@ defmodule ExBitstamp.Api do
     |> parse_response
   end
 
-  def post(path) do
+  def post(path, params \\ %{}) do
     headers = %{"Content-Type": "application/x-www-form-urlencoded"}
     nonce = generate_nonce()
     message = [nonce, customer_id(), api_key()]
               |> Enum.join("")
-    body = %{"key": api_key(), "signature": sign(message), "nonce": nonce}
+    body = params
+           |> Map.merge(%{"key": api_key(), "signature": sign(message), "nonce": nonce})
            |> URI.encode_query
 
     path

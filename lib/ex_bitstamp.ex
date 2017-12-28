@@ -6,4 +6,5 @@ defmodule ExBitstamp do
   defdelegate order_book(symbol), to: ExBitstamp.Public
   defdelegate ticker(symbol), to: ExBitstamp.Public
   defdelegate balance, to: ExBitstamp.Private
+  defdelegate buy_limit(symbol, price, amount), to: ExBitstamp.Private
 end

@@ -110,4 +110,31 @@ defmodule ExBitstampTest do
       assert ExBitstamp.ticker(:idontexist) == {:error, "not found"}
     end
   end
+
+  test "buy_limit creates an order and returns it's details" do
+    use_cassette "buy_limit_success" do
+      assert ExBitstamp.buy_limit(:btcusd, 101.1, 0.1) == {
+        :ok,
+        %{
+          "amount" => "0.10000000",
+          "datetime" => "2017-12-28 06:54:55.982660",
+          "id" => "674783313",
+          "price" => "101.10",
+          "type" => "0"
+        }
+      }
+    end
+  end
+
+  test "buy_limit returns an error/details tuple when it can't create the order" do
+    use_cassette "buy_limit_error" do
+      assert ExBitstamp.buy_limit(:btcusd, -101.1, 0.01) == {
+        :error,
+        %{
+          "__all__" => [""],
+          "price" => ["Ensure this value is greater than or equal to 1E-8."]
+        }
+      }
+    end
+  end
 end

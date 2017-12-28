@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "key=the_api_key&nonce=1514443629299946000&signature=the_signature&amount=0.01&price=-101.1",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.bitstamp.net/api/v2/buy/btcusd/"
+    },
+    "response": {
+      "body": "{\"status\": \"error\", \"reason\": {\"price\": [\"Ensure this value is greater than or equal to 1E-8.\"], \"__all__\": [\"\"]}}",
+      "headers": {
+        "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, accept, cache-control",
+        "Access-Control-Allow-Methods": "POST, GET",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "max-age=0",
+        "Content-Language": "en",
+        "Content-Type": "application/json",
+        "Date": "Thu, 28 Dec 2017 06:47:09 GMT",
+        "Expires": "Thu, 28 Dec 2017 06:47:09 GMT",
+        "Last-Modified": "Thu, 28 Dec 2017 06:47:09 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Vary": "Accept-Language",
+        "X-Frame-Options": "SAMEORIGIN",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "visid_incap_99025=/sW8/Z4tRlm/9UrF1J1mNGyTRFoAAAAAQUIPAAAAAAAMRDJAXHTQ6T+9eiLv/ArZ; expires=Thu, 27 Dec 2018 10:18:29 GMT; path=/; Domain=.bitstamp.net",
+        "X-Iinfo": "14-122724010-122721598 SNNN RT(1514443628225 453) q(0 0 0 -1) r(2 2) U6",
+        "X-CDN": "Incapsula"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
