@@ -64,44 +64,22 @@ defmodule ExBitstampTest do
 
   test "balance returns the value of each account" do
     use_cassette "balance_success" do
-      assert ExBitstamp.balance == {:ok, %{
-        "xrp_reserved" => "0.00000000",
-        "bcheur_fee" => "0.00",
-        "ltc_balance" => "0.00000000",
-        "ltcbtc_fee" => "0.20",
-        "btc_balance" => "0.00000000",
-        "ltc_reserved" => "0.00000000",
-        "eth_balance" => "0.00000000",
-        "eur_available" => "0.00",
-        "xrpbtc_fee" => "0.20",
-        "bchusd_fee" => "0.00",
-        "bch_available" => "0.00000000",
-        "eurusd_fee" => "0.20",
-        "ethusd_fee" => "0.15",
-        "btc_available" => "0.00000000",
-        "xrpeur_fee" => "0.20",
-        "eur_balance" => "0.00",
-        "btceur_fee" => "0.20",
-        "usd_balance" => "0.00",
-        "bch_balance" => "0.00000000",
-        "xrpusd_fee" => "0.20",
-        "ltcusd_fee" => "0.20",
-        "eth_available" => "0.00000000",
-        "bch_reserved" => "0.00000000",
-        "ltceur_fee" => "0.20",
-        "etheur_fee" => "0.15",
-        "eur_reserved" => "0.00",
-        "ethbtc_fee" => "0.15",
-        "xrp_balance" => "0.00000000",
-        "ltc_available" => "0.00000000",
-        "bchbtc_fee" => "0.00",
-        "eth_reserved" => "0.00000000",
-        "btcusd_fee" => "0.20",
-        "usd_available" => "0.00",
-        "xrp_available" => "0.00000000",
-        "usd_reserved" => "0.00",
-        "btc_reserved" => "0.00000000"
-      }}
+      {:ok, balances} = ExBitstamp.balance
+
+      assert balances["usd_balance"] == "0.00"
+      assert balances["usd_available"] == "0.00"
+      assert balances["usd_reserved"] == "0.00"
+      assert balances["btc_balance"] == "0.00000000"
+      assert balances["btc_available"] == "0.00000000"
+      assert balances["btc_reserved"] == "0.00000000"
+      assert balances["btcusd_fee"] == "0.20"
+      assert balances["btceur_fee"] == "0.20"
+      assert balances["ltc_balance"] == "0.00000000"
+      assert balances["ltc_available"] == "0.00000000"
+      assert balances["ltc_reserved"] == "0.00000000"
+      assert balances["ltcusd_fee"] == "0.20"
+      assert balances["ltceur_fee"] == "0.20"
+      assert balances["ltcbtc_fee"] == "0.20"
     end
   end
 
