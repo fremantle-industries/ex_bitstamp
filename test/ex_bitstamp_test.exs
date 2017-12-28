@@ -88,4 +88,26 @@ defmodule ExBitstampTest do
       assert ExBitstamp.balance == {:error, "Missing key, signature and nonce parameters. code: API0000"}
     end
   end
+
+  test "ticker returns pricing data for the currency pair" do
+    use_cassette "ticker_success" do
+      assert ExBitstamp.ticker(:btcusd) == {:ok, %{
+        "ask" => "15206.12",
+        "bid" => "15200.04",
+        "high" => "16480.52",
+        "last" => "15200.00",
+        "low" => "14484.00",
+        "open" => "15390.05",
+        "timestamp" => "1514422945",
+        "volume" => "15637.34379848",
+        "vwap" => "15448.06"
+      }}
+    end
+  end
+
+  test "ticker returns an error/message tuple when the currency pair doesn't exist" do
+    use_cassette "ticker_not_found" do
+      assert ExBitstamp.ticker(:idontexist) == {:error, "not found"}
+    end
+  end
 end

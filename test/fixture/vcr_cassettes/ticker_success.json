@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.bitstamp.net/api/v2/ticker/btcusd"
+    },
+    "response": {
+      "body": "{\"high\": \"16480.52\", \"last\": \"15200.00\", \"timestamp\": \"1514422945\", \"bid\": \"15200.04\", \"vwap\": \"15448.06\", \"volume\": \"15637.34379848\", \"low\": \"14484.00\", \"ask\": \"15206.12\", \"open\": \"15390.05\"}",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, accept, cache-control",
+        "Access-Control-Allow-Methods": "POST, GET",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+        "Date": "Thu, 28 Dec 2017 01:02:43 GMT",
+        "ETag": "\"6156a-c0-5615c11bb43b3\"",
+        "Last-Modified": "Thu, 28 Dec 2017 01:02:25 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Content-Length": "192",
+        "Connection": "keep-alive",
+        "Set-Cookie": "nlbi_99025=0tZ+M52XmV+2C4jz8F1n9AAAAADwtYrJValcYfVh+mgqz9Di; path=/; Domain=.bitstamp.net",
+        "X-Iinfo": "10-56615681-56613914 2NNN RT(1514422962155 98) q(0 0 0 1) r(2 2)",
+        "X-CDN": "Incapsula"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
