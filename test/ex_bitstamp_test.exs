@@ -138,6 +138,33 @@ defmodule ExBitstampTest do
     end
   end
 
+  test "sell_limit creates an order and returns it's details" do
+    use_cassette "sell_limit_success" do
+      assert ExBitstamp.sell_limit(:btcusd, 99_999.01, 0.01) == {
+        :ok,
+        %{
+          "amount" => "0.01000000",
+          "datetime" => "2017-12-29 06:17:23.259246",
+          "id" => "680201656",
+          "price" => "99999.01",
+          "type" => "1"
+        }
+      }
+    end
+  end
+
+  test "sell_limit returns an error/details tuple when it can't create the order" do
+    use_cassette "sell_limit_error" do
+      assert ExBitstamp.sell_limit(:btcusd, -99_999, 0.01) == {
+        :error,
+        %{
+          "__all__" => [""],
+          "price" => ["Ensure this value is greater than or equal to 1E-8."]
+        }
+      }
+    end
+  end
+
   test "order_status returns the order details" do
     use_cassette "order_status_success" do
       {:ok, %{"id" => order_id}} = ExBitstamp.buy_limit(:btcusd, 101.1, 0.1)

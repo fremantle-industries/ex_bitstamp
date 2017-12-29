@@ -9,12 +9,13 @@ defmodule ExBitstamp.Private do
   def buy_limit(symbol, price, amount) do
     "buy/#{symbol}/"
     |> Api.post(%{"price" => price, "amount" => amount})
-    |> case do
-      {:ok, %{"status" => "error", "reason" => reason}} ->
-        {:error, reason}
-      {:ok, order} ->
-        {:ok, order}
-    end
+    |> handle_create_order
+  end
+
+  def sell_limit(symbol, price, amount) do
+    "sell/#{symbol}/"
+    |> Api.post(%{"price" => price, "amount" => amount})
+    |> handle_create_order
   end
 
   def order_status(order_id) do
@@ -26,5 +27,12 @@ defmodule ExBitstamp.Private do
       {:ok, details} ->
         {:ok, details}
     end
+  end
+
+  defp handle_create_order({:ok, %{"status" => "error", "reason" => reason}}) do
+    {:error, reason}
+  end
+  defp handle_create_order({:ok, order}) do
+    {:ok, order}
   end
 end
