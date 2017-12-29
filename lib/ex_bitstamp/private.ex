@@ -16,4 +16,15 @@ defmodule ExBitstamp.Private do
         {:ok, order}
     end
   end
+
+  def order_status(order_id) do
+    "order_status/"
+    |> Api.post(%{"id" => order_id})
+    |> case do
+      {:ok, %{"status" => "error", "reason" => reason}} ->
+        {:error, reason}
+      {:ok, details} ->
+        {:ok, details}
+    end
+  end
 end
