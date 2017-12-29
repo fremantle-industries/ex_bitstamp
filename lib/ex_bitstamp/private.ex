@@ -29,6 +29,17 @@ defmodule ExBitstamp.Private do
     end
   end
 
+  def cancel_order(order_id) do
+    "cancel_order/"
+    |> Api.post(%{"id" => order_id})
+    |> case do
+      {:ok, %{"error" => reason}} ->
+        {:error, reason}
+      {:ok, details} ->
+        {:ok, details}
+    end
+  end
+
   defp handle_create_order({:ok, %{"status" => "error", "reason" => reason}}) do
     {:error, reason}
   end

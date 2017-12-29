@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "key=the_api_key&nonce=1514530458496404000&signature=the_signature&id=101",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://www.bitstamp.net/api/v2/cancel_order/"
+    },
+    "response": {
+      "body": "{\"error\": \"Order not found\"}",
+      "headers": {
+        "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, accept, cache-control",
+        "Access-Control-Allow-Methods": "POST, GET",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "max-age=0",
+        "Content-Language": "en",
+        "Content-Type": "application/json",
+        "Date": "Fri, 29 Dec 2017 06:54:18 GMT",
+        "Expires": "Fri, 29 Dec 2017 06:54:18 GMT",
+        "Last-Modified": "Fri, 29 Dec 2017 06:54:18 GMT",
+        "Server": "Apache",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+        "Vary": "Accept-Language",
+        "X-Frame-Options": "SAMEORIGIN",
+        "transfer-encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "visid_incap_99025=J8pOI7QkQmOdjfQEFM8jxprmRVoAAAAAQUIPAAAAAACPvhVMAm6WiF9b8kPXtlQ/; expires=Fri, 28 Dec 2018 10:18:30 GMT; path=/; Domain=.bitstamp.net",
+        "X-Iinfo": "14-131300138-131293917 PNNN RT(1514530457926 102) q(0 0 0 -1) r(1 1) U6",
+        "X-CDN": "Incapsula"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

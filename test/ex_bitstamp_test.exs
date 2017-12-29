@@ -179,4 +179,19 @@ defmodule ExBitstampTest do
       assert ExBitstamp.order_status(673710693) == {:error, "Order not found."}
     end
   end
+
+  test "cancel_order returns the orders details" do
+    use_cassette "cancel_order_success" do
+      {:ok, %{"id" => order_id}} = ExBitstamp.buy_limit(:btcusd, 101.1, 0.1)
+      {:ok, order} = ExBitstamp.cancel_order(order_id)
+
+      assert order == %{"id" => 680304810, "amount" => 0.1, "price" => 101.1, "type" => 0}
+    end
+  end
+
+  test "cancel_order returns an error/reason tuple when the order id doesn't exist" do
+    use_cassette "cancel_order_not_found" do
+      assert ExBitstamp.cancel_order(101) == {:error, "Order not found"}
+    end
+  end
 end

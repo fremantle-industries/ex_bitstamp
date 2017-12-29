@@ -9,4 +9,5 @@ defmodule ExBitstamp do
   defdelegate buy_limit(symbol, price, amount), to: ExBitstamp.Private
   defdelegate sell_limit(symbol, price, amount), to: ExBitstamp.Private
   defdelegate order_status(order_id), to: ExBitstamp.Private
+  defdelegate cancel_order(order_id), to: ExBitstamp.Private
 end
